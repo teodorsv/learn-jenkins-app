@@ -31,7 +31,6 @@ pipeline {
             }
             steps {
                 sh '''
-                    npm ci
                     test -f build/index.html
                     npm test
                 '''
