@@ -98,8 +98,7 @@ pipeline {
             steps {
                 timeout(time: 1, unit: 'MINUTES') {
                     input message: "The staging build is passed!", ok: "OK, I'm ready to deploy on production."
-}
-                
+                }    
             }
         }
    
