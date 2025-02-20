@@ -9,14 +9,6 @@ pipeline {
     }
 
     stages {
-
-
-
-        stage('Docker') {
-            steps {
-                sh 'docker build -t my-playwright .'
-            }
-        }
     
         stage('Build') {
             agent {
@@ -59,7 +51,7 @@ pipeline {
             }
         }
 
-        
+
         stage('Tests') {
             parallel {
                 stage('Unit tests') {
